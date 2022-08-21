@@ -1,4 +1,4 @@
-# LinkedIn Authentication Test
+# UI for Login Test
 
 To run the test copy contents in env-example, create a `.env` file and add to it along with your credentials
 Ensure to create a .gitignore file and add include theclea .env
