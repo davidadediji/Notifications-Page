@@ -13,7 +13,7 @@ This project is based on a challenge on frontend mentors to implement a notifica
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/davidadediji/Notifications-Page.git
 ```
 
 Go to the project directory
