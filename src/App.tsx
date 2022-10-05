@@ -5,12 +5,7 @@ import Data from './data/data.json'
 
 function App() {
 
-  const nameObj = {
-    firstname:'David',
-    lastname:'Adediji'
-  }
-
-  type Notification = [
+  interface Notification {
     id: string,
 		user: string,
 		action: string,
@@ -18,17 +13,17 @@ function App() {
 		time: string,
 		status: string,
 		details?:string|null
-  ]
+  }
 
-  const [notify, setNotify] = useState<Notification[]|undefined>()
+  const [notify, setNotify] = useState<Notification[]>([])
 
   useEffect(()=>{
-    setNotify(Data)
-  },[])
+    setNotify((prev)=>[...prev, ...Data])
+  }, [])
 
 	return (
 		<Box>
-      <NotificationPage data = {notify}></NotificationPage>
+      <NotificationPage unique={true} data={notify}></NotificationPage>
 			
 		</Box>
 	);

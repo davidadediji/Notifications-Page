@@ -12,10 +12,11 @@ interface DataProps {
 		time: string;
 		status: string;
 		details?:string|null;
-	}[];
+	}[],
+	unique:true
 }
 
-export const NotificationPage = ({ data }: DataProps) => {
+export const NotificationPage = ({ data, unique }: DataProps) => {
 	return (
 		<Box>
 			{data.map((detail) => {
