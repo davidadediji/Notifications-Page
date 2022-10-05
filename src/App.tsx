@@ -20,7 +20,6 @@ function App() {
 	const [count, setCount] = useState<number>(0)
 
 	useEffect(() => {
-		
 		setNotify(Data);
 	}, []);
 
@@ -34,16 +33,6 @@ function App() {
 			return { ...values, status: 'unread' };
 		});
 		setNotify(newDate);
-	};
-
-	const markAsRead = (id:string) => {
-		const read = Data.map((values) => {
-			if(values.id === id && id !== undefined){
-				return { ...values, status: 'read' };
-			}
-		});
-		console.log(read)
-		// setNotify(read);
 	};
 	
 	const handleClick = (id: string) => {
