@@ -19,23 +19,24 @@ export const Card = ({
 	details,
 }: Person) => {
 	return (
-		<Box border={'1px solid blue'} mt={2} display={'flex'}>
-			<Box border={'1px solid blue'}>
+		<Box mt={2} display={'flex'}>
+			<Box>
 				<Avatar
 					size='sm'
 					name='Ryan Florence'
 					src='https://bit.ly/ryan-florence'
 				/>
 			</Box>
-			<Box border={'1px solid red'} ml={4}>
-				<Flex gap={1.5}>
-					<Text>{user}</Text>
-					<Text>{action}</Text>
-					<Text>{reaction}</Text>
-				</Flex>
-				{details && <Box>
-					{details}
-				</Box>}
+			<Box ml={4}>
+				<Text as={'span'} fontWeight={800}>{user} </Text>
+				<Text as={'span'}> {action} </Text>
+				<Text as={'span'} fontWeight={500}> {reaction}</Text>
+				<Box lineHeight={1.5}>{time}</Box>
+				{details && (
+					<Box border={'1px solid hsl(211, 68%, 94%)'} width={545} p={4} mt={'2'} borderRadius={'10px'}>
+						{details}
+					</Box>
+				)}
 			</Box>
 		</Box>
 	);

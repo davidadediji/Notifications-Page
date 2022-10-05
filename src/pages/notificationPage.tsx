@@ -17,7 +17,7 @@ interface DataProps {
 
 export const NotificationPage = ({ data, unique }: DataProps) => {
 	return (
-		<Box mt={200} bg={'#fff'} p={5}>
+		<Box mt={100} bg={'#fff'} p={5}>
 			<Flex py={3} pb={'4'}>
 				<Box fontWeight={800}>Notifications</Box>
 				<Spacer />
