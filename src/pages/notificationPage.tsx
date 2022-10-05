@@ -5,9 +5,10 @@ import { Card } from '../components/Card';
 interface DataProps {
 	data: {
 		id: string;
+		image: string;
 		user: string;
 		action: string;
-		reaction?: string | null; 
+		reaction?: string | null;
 		time: string;
 		status: string;
 		details?: string | null;
@@ -21,13 +22,24 @@ export const NotificationPage = ({ data, unique }: DataProps) => {
 			<Flex py={3} pb={'4'}>
 				<Box fontWeight={800}>Notifications</Box>
 				<Spacer />
-				<Box fontSize={'14px'}> Mark all as read</Box>
+				<Box
+					fontSize={'14px'}
+					_hover={{
+						background: 'white',
+						color: 'teal.500',
+						cursor: 'pointer',
+					}}
+				>
+					{' '}
+					Mark all as read
+				</Box>
 			</Flex>
 			<Box>
 				{data.map((detail) => {
 					return (
 						<Card
 							user={detail.user}
+							image={detail.image}
 							action={detail.action}
 							reaction={detail.reaction}
 							time={detail.time}

@@ -1,6 +1,7 @@
 [
 	{
 		"id": "1",
+		"image":"../assets/avatar-mark-webber.webp",
 		"user": "Mark Webber",
 		"action": "reacted to your recent post",
 		"reaction": "My first tournament today!",
@@ -10,6 +11,7 @@
 	},
 	{
 		"id": "2",
+		"image":"../assets/avatar-angela-gray.webp",
 		"user": "Angela Gray",
 		"action": "followed you",
 		"reaction": "My first tournament today!",
@@ -19,6 +21,7 @@
 	},
 	{
 		"id": "3",
+		"image":"../assets/avatar-jacob-thompson.webp",
 		"user": "Jacob Thompson",
 		"action": "has joined your group",
 		"reaction": "Chess Club",
@@ -28,6 +31,7 @@
 	},
 	{
 		"id": "4",
+		"image":"../assets/avatar-rizky-hasanuddin.webp",
 		"user": "Rizky Hasanuddin",
 		"action": "sent you a private message",
 		"reaction": null,
@@ -37,6 +41,7 @@
 	},
 	{
 		"id": "5",
+		"image":"../assets/avatar-kimberly-smith.webp",
 		"user": "Kimberly Smith",
 		"action": "commented on your picture",
 		"reaction": null,
@@ -46,6 +51,7 @@
 	},
 	{
 		"id": "6",
+		"image":"../assets/avatar-nathan-peterson.webp",
 		"user": "Nathan Peterson",
 		"action": "reacted to your recent post",
 		"reaction": "5 end-game strategies to increase your win rate",
@@ -55,6 +61,7 @@
 	},
 	{
 		"id": "7",
+		"image":"../assets/avatar-anna-kim.webp",
 		"user": "Anna Kim",
 		"action": "left the group",
 		"reaction": "Chess Club",

@@ -6,6 +6,7 @@ import Data from './data/data.json';
 function App() {
 	interface Notification {
 		id: string;
+		image:string;
 		user: string;
 		action: string;
 		reaction: string | null;
