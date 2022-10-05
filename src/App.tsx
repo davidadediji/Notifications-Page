@@ -1,30 +1,30 @@
 import { useState, useEffect } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { NotificationPage } from './pages/notificationPage';
-import Data from './data/data.json'
+import Data from './data/data.json';
 
 function App() {
+	interface Notification {
+		id: string;
+		user: string;
+		action: string;
+		reaction: string | null;
+		time: string;
+		status: string;
+		details?: string | null;
+	}
 
-  interface Notification {
-    id: string,
-		user: string,
-		action: string,
-		reaction: string,
-		time: string,
-		status: string,
-		details?:string|null
-  }
+	const [notify, setNotify] = useState<Notification[]>([]);
 
-  const [notify, setNotify] = useState<Notification[]>([])
-
-  useEffect(()=>{
-    setNotify((prev)=>[...prev, ...Data])
-  }, [])
+	useEffect(() => {
+		setNotify(Data);
+	}, []);
 
 	return (
-		<Box>
-      <NotificationPage unique={true} data={notify}></NotificationPage>
-			
+		<Box height={'100vh'} bg={'hsl(210, 60%, 98%)'}>
+			<Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+				<NotificationPage unique={true} data={notify}></NotificationPage>
+			</Box>
 		</Box>
 	);
 }

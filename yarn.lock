@@ -1605,6 +1605,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/plus-jakarta-sans@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/plus-jakarta-sans@npm:4.5.10"
+  checksum: 4430ef40504d692f44c8bc48804843431239d9a40956330327f460b1b14630d303965905e4a1ace030fdef41db8089871c2ca1cad563b9a312956f071b994012
+  languageName: node
+  linkType: hard
+
 "@fontsource/raleway@npm:^4.5.10":
   version: 4.5.10
   resolution: "@fontsource/raleway@npm:4.5.10"
@@ -3120,6 +3127,7 @@ __metadata:
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
     "@fontsource/open-sans": ^4.5.11
+    "@fontsource/plus-jakarta-sans": ^4.5.10
     "@fontsource/raleway": ^4.5.10
     "@types/react": ^18.0.17
     "@types/react-dom": ^18.0.6

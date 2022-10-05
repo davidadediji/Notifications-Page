@@ -16,5 +16,50 @@
 		"time": "5m ago",
 		"status": "unread",
 		"details":null
+	},
+	{
+		"id": "3",
+		"user": "Jacob Thompson",
+		"action": "has joined your group",
+		"reaction": "Chess Club",
+		"time": "1 day ago",
+		"status": "unread",
+		"details":null
+	},
+	{
+		"id": "4",
+		"user": "Rizky Hasanuddin",
+		"action": "sent you a private message",
+		"reaction": null,
+		"time": "5 days ago",
+		"status": "read",
+		"details":"Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
+	},
+	{
+		"id": "5",
+		"user": "Kimberly Smith",
+		"action": "commented on your picture",
+		"reaction": null,
+		"time": "1 week ago",
+		"status": "read",
+		"details":null
+	},
+	{
+		"id": "6",
+		"user": "Nathan Peterson",
+		"action": "reacted to your recent post",
+		"reaction": "5 end-game strategies to increase your win rate",
+		"time": "2 weeks ago",
+		"status": "unread",
+		"details":null
+	},
+	{
+		"id": "7",
+		"user": "Anna Kim",
+		"action": "left the group",
+		"reaction": "Chess Club",
+		"time": "2 weeks ago",
+		"status": "unread",
+		"details":null
 	}
 ]
