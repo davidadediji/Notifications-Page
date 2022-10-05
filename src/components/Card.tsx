@@ -10,6 +10,7 @@ type Person = {
 	time: string;
 	status: string;
 	details?: string | null;
+	onClick?: () => void
 };
 
 export const Card = ({
@@ -19,6 +20,7 @@ export const Card = ({
 	reaction,
 	time,
 	status,
+	onClick,
 	details,
 }: Person) => {
 	console.log(image);
@@ -29,6 +31,7 @@ export const Card = ({
 			bg={status === 'unread' ? 'hsl(205, 33%, 90%)' : '#fff'}
 			p={2}
 			borderRadius={'10px'}
+			onClick={onClick}
 		>
 			<Box>
 				<Avatar size='sm' name={user} src={image} />

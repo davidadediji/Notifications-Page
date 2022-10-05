@@ -15,16 +15,25 @@ interface DataProps {
 	}[];
 	unique: true;
 	styles: () => void;
+	handleClick?: (id: string) => () => void;
+	count?:number
 }
 
-export const NotificationPage = ({ data, unique, styles }: DataProps) => {
+export const NotificationPage = ({
+	data,
+	unique,
+	styles,
+	handleClick,
+	count
+}: DataProps) => {
+	
 	return (
 		<Box mt={100} bg={'#fff'} p={5}>
 			<Flex py={3} pb={'4'}>
 				<Box fontWeight={800}>
 					Notifications{' '}
 					<Text as={'span'} bg={'blue'} px={2} py={0.5} color={'#fff'}>
-						5
+						{count}
 					</Text>
 				</Box>
 				<Spacer />
@@ -43,6 +52,7 @@ export const NotificationPage = ({ data, unique, styles }: DataProps) => {
 				{data.map((detail) => {
 					return (
 						<Card
+							onClick={handleClick?.(detail.id)}
 							user={detail.user}
 							image={detail.image}
 							action={detail.action}

@@ -17,10 +17,17 @@ function App() {
 	}
 
 	const [notify, setNotify] = useState<Notification[]>([]);
+	const [count, setCount] = useState<number>(0)
 
 	useEffect(() => {
+		
 		setNotify(Data);
 	}, []);
+
+	useEffect(()=>{
+		const readNotify = notify.filter((value)=>(value.status==='unread'))
+		setCount(readNotify.length)
+	},[notify])
 
 	const markAll = () => {
 		const newDate = Data.map((values) => {
@@ -38,11 +45,23 @@ function App() {
 		console.log(read)
 		// setNotify(read);
 	};
-
+	
+	const handleClick = (id: string) => {
+		const cp = () => {
+			const newNotify = notify.map((value)=>{
+				if (value.id === id){
+					return {...value, status:'read'}
+				}
+				return value
+			})
+			setNotify(newNotify)
+		};
+		return cp;
+	};
 	return (
 		<Box height={'100vh'} bg={'hsl(210, 60%, 98%)'}>
 			<Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
-				<NotificationPage unique={true} data={notify} styles={markAll}></NotificationPage>
+				<NotificationPage unique={true} data={notify} styles={markAll}  handleClick={handleClick} count={count}></NotificationPage>
 			</Box>
 		</Box>
 	);
