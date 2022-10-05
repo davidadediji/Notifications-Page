@@ -1,4 +1,4 @@
-import { Box, Center, VStack, Flex, Spacer } from '@chakra-ui/react';
+import { Box, Center, VStack, Flex, Spacer, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Card } from '../components/Card';
 
@@ -14,24 +14,29 @@ interface DataProps {
 		details?: string | null;
 	}[];
 	unique: true;
+	styles: () => void;
 }
 
-export const NotificationPage = ({ data, unique }: DataProps) => {
+export const NotificationPage = ({ data, unique, styles }: DataProps) => {
 	return (
 		<Box mt={100} bg={'#fff'} p={5}>
 			<Flex py={3} pb={'4'}>
-				<Box fontWeight={800}>Notifications</Box>
+				<Box fontWeight={800}>
+					Notifications{' '}
+					<Text as={'span'} bg={'blue'} px={2} py={0.5} color={'#fff'}>
+						5
+					</Text>
+				</Box>
 				<Spacer />
 				<Box
 					fontSize={'14px'}
 					_hover={{
 						background: 'white',
-						color: 'teal.500',
+						color: 'blue.600',
 						cursor: 'pointer',
 					}}
 				>
-					{' '}
-					Mark all as read
+					<Text onClick={styles}>Mark all as read</Text>
 				</Box>
 			</Flex>
 			<Box>

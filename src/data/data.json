@@ -14,7 +14,7 @@
 		"image":"../assets/avatar-angela-gray.webp",
 		"user": "Angela Gray",
 		"action": "followed you",
-		"reaction": "My first tournament today!",
+		"reaction": null,
 		"time": "5m ago",
 		"status": "unread",
 		"details":null
@@ -56,7 +56,7 @@
 		"action": "reacted to your recent post",
 		"reaction": "5 end-game strategies to increase your win rate",
 		"time": "2 weeks ago",
-		"status": "unread",
+		"status": "read",
 		"details":null
 	},
 	{
@@ -66,7 +66,7 @@
 		"action": "left the group",
 		"reaction": "Chess Club",
 		"time": "2 weeks ago",
-		"status": "unread",
+		"status": "read",
 		"details":null
 	}
 ]

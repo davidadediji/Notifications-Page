@@ -1,4 +1,4 @@
-import { Avatar, Box, Text } from '@chakra-ui/react';
+import { Avatar, Box, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
 import Image from '../assets/avatar-anna-kim.webp';
 
@@ -23,7 +23,13 @@ export const Card = ({
 }: Person) => {
 	console.log(image);
 	return (
-		<Box mt={2} display={'flex'}>
+		<Box
+			mt={2}
+			display={'flex'}
+			bg={status === 'unread' ? 'hsl(205, 33%, 90%)' : '#fff'}
+			p={2}
+			borderRadius={'10px'}
+		>
 			<Box>
 				<Avatar size='sm' name={user} src={image} />
 			</Box>
@@ -32,9 +38,8 @@ export const Card = ({
 					as={'span'}
 					fontWeight={800}
 					_hover={{
-						background: 'white',
-						color: 'teal.500',
-						cursor:'pointer'
+						color: 'blue.600',
+						cursor: 'pointer',
 					}}
 				>
 					{' '}
@@ -45,6 +50,14 @@ export const Card = ({
 					{' '}
 					{reaction}
 				</Text>
+				{status === "unread" && (
+					<Icon viewBox='0 0 200 200' color='red.500'>
+						<path
+							fill='currentColor'
+							d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
+						/>
+					</Icon>
+				)}
 				<Box lineHeight={1.5}>{time}</Box>
 				{details && (
 					<Box
@@ -53,6 +66,10 @@ export const Card = ({
 						p={4}
 						mt={'2'}
 						borderRadius={'10px'}
+						_hover={{
+							background: 'hsl(205, 33%, 90%)',
+							cursor: 'pointer',
+						}}
 					>
 						{details}
 					</Box>
